@@ -1,0 +1,9 @@
+h1 {
+    font-size: 4em;
+    position: absolute;
+    top: 50vh;
+}
+
+span {
+    display: inline-block;
+}

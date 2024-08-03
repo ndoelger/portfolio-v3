@@ -16,7 +16,7 @@ function Header() {
       { opacity: 0, y: 40 },
       {
         opacity: 1,
-        y: 0,
+        y: 10,
         stagger: 0.1,
         scrollTrigger: {
           trigger: ".name",

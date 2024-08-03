@@ -11,18 +11,38 @@ function Header() {
   const headerRef = useRef();
 
   useGSAP(() => {
-    gsap.to(".letter", {
-      y: -40,
-      opacity: 1,
-      stagger: 0.02,
-      scrollTrigger: {
-        trigger: ".name",
-        scrub: true,
-        start: "top 33%",
-        end: "top 13%",
-        markers: true,
-      },
-    });
+    gsap.fromTo(
+      ".letter",
+      { opacity: 0, y: 40 },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: ".name",
+          scrub: true,
+          start: "top 40%",
+          end: "top 13%",
+          markers: true,
+        },
+      }
+    );
+    gsap.fromTo(
+      ".swe",
+      { opacity: 0, y: 40 },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: ".swe",
+          scrub: true,
+          start: "top 20%",
+          end: "top 7%",
+          markers: true,
+        },
+      }
+    );
   }, [headerRef]);
 
   return (
@@ -34,7 +54,7 @@ function Header() {
           </span>
         ))}
       </h1>{" "}
-      <h2>Software Engineer</h2>
+      <h2 className="swe">Software Engineer</h2>
     </div>
   );
 }
